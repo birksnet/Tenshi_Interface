@@ -2,8 +2,8 @@
 
 class acionador:
 
-    def apeto():
-        print("voce conceguiu agora pode ir dormir")
-
-    def Nome():
-        print("Felipe Matus Huinka")
+    urlBase = 'controle.custom'
+    
+    def __init__(self,_classMetodo):
+        cm = _classMetodo
+        print(cm)
