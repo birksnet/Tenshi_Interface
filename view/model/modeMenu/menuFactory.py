@@ -14,15 +14,13 @@ class menuFactory :
     botao = []
 
 
-    def __init__(self,_pai,_ac=acionador):
+    def __init__(self,_pai):
         self.pai = _pai
-        self.ac = _ac
 
-    def create(self):
-      for item in self.menuObj:
+    def create(self,_btn):
           btn = Button(self.pai)
-          btn["text"] = item.texto
-          btn["command"] = self.ac.apeto
+          btn["text"] = _btn.texto
+          btn["command"] = lambda: acionador(_btn.acao)
           btn["width"]= 20
           btn.pack()
           self.botao.append(btn)
@@ -30,7 +28,7 @@ class menuFactory :
     def addBotao(self,_texto="",_acao=None):
         bt = menuItem(_texto,_acao)
         self.menuObj.append(bt)
-        self.create()
+        self.create(bt)
 
     def Teste(self):
         print("Teste")
