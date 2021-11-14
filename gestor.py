@@ -1,14 +1,10 @@
-from view.model.appModel import appModel
-from view.appFactory import criaApp
+#!/usr/bin/env python
+
+from aparencia.modelos import teste
+from visao.appFabrica import criaApp
+
+
 
 meuApp = criaApp("Janela 1")
 
 meuApp.Loop()
-
-# app = appModel() 
-
-# app.setaTitulo("Gestor de Servidores Magento")
-
-# app.menuitem.addBotao("Instalar Magento")
-
-# app.app.mainloop()
